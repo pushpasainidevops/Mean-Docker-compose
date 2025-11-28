@@ -15,5 +15,6 @@ COPY --from=build /app/dist /usr/share/nginx/html
 # Remove default conf and copy our frontend-only config (optional)
 #RUN rm /etc/nginx/conf.d/default.conf
 #COPY nginx-frontend.conf /etc/nginx/conf.d/frontend.conf
-EXPOSE 80
+Run ng serve --port 8081
+EXPOSE 8081
 CMD ["nginx", "-g", "daemon off;"]
